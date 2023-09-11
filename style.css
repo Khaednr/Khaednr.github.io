@@ -1,0 +1,533 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: poppins, sans-serif;
+    text-decoration: none !important;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.hero-header {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: #222;
+}
+
+.wrapper {
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #222;
+    z-index: 100;
+    transition: top 0.3s ease;
+    border-bottom: 1px solid #f1cd00;
+}
+
+.sticky .logo {
+    padding-left: 50px;
+}
+
+header {
+    background-color: #222;
+    padding: 40px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.logo i {
+    height: 45px;
+    width: 45px;
+    background-color: #f1cd00;
+    border-radius: 50%;
+    color: #222;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.logo .logo-text {
+    font-size: 24px;
+    font-weight: 500;
+    color: rgb(241, 205, 0);
+}
+
+nav .togglebtn {
+    display: none;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 45px;
+    right: 3%;
+    z-index: 5;
+    cursor: pointer;
+    
+}
+
+nav .togglebtn span {
+    display: block;
+    background-color: rgb(241, 205, 0);
+    margin: 5px 0px;
+    width: 100%;
+    height: 3px;
+    transition: 0.3s;
+    transition-property: transform, opacity;
+}
+
+nav .navlinks {
+    list-style-type: none !important;
+}
+
+nav .navlinks li {
+    display: inline-block;
+}
+
+nav .navlinks li a {
+    color: rgb(241, 205, 0);
+    margin-right: 2.5rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+.container .hero-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 15px solid rgb(241, 205, 0);
+    box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+}
+
+.hero-pic img {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.hero-pic img:hover {
+    transform: scale(1.2);
+}
+
+.hero-text {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-text h5 {
+    color: #e5e5e5;
+    font-size: 14px;
+}
+
+.hero-text h5 span {
+    color: rgb(241, 205, 0);
+    font-size: 16px;
+}
+
+.hero-text h1 {
+    color: rgb(241, 205, 0);
+    font-size: 3rem;
+}
+
+.hero-text p {
+    color: #e5e5e5;
+}
+
+.btn-group {
+    margin: 10px 0;
+}
+
+.btn-group .btn {
+    border-color: #d5d5d5;
+    color: rgb(241, 205, 0);
+    background-color: #333;
+    padding: 12px 25px;
+    margin: 5px 0;
+    margin-right: 7px;
+    border-radius: 30px;
+    border: 2px solid rgb(241, 205, 0);
+    box-shadow: 0 10px 10px -8px rgb(0, 0, 0 / 78%);
+}
+
+.btn.active {
+    border-color: #fff1a4;
+}
+
+.hero-text .social i {
+    color: rgb(241, 205, 0);
+    font-size: 1.5rem;
+    margin-right: 10px;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+
+.hero-text .social i:hover {
+    color: #fff1a4;
+    transform: rotate(360deg);
+}
+
+.wave1 {
+    position: absolute;
+    bottom: 0;
+}
+
+#about {
+    padding-top: 5rem;
+    background-color: #f1cd00;
+}
+
+#projects {
+    padding-top: 5rem;
+    background-color: #222;
+}
+
+.project-tile {
+    background-color: #333;
+    border: 2px solid rgb(241, 205, 0);
+    border-radius: 10px;
+    box-shadow: 0 10px 10px -8px rgb(0, 0, 0 / 78%);
+    transition: 0.5s;
+    margin: 30px 0;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.project-tile h5 {
+    color: rgb(241, 205, 0);
+}
+
+.project-tile p {
+    color: #e5e5e5;
+}
+
+.project-tile a {
+    background-color: #333;
+    color: rgb(241, 205, 0);
+    border-color: #f1cd00;
+}
+
+.project-tile a:hover {
+    background-color: #f1cd00;
+    color: #222;
+}
+
+.project-tile:hover {
+    transform: scale(1.1);
+}
+
+#contact {
+    background-color: #f1cd00;
+}
+
+#contact .row {
+    padding-top: 5rem;
+    width: 100%;
+}
+
+#contact .btn {
+    background-color: #333;
+    color: rgb(241, 205, 0);
+    border-color: #f1cd00;
+    box-shadow: 0 10px 10px -8px rgb(0, 0, 0 / 78%);
+    width: 100%;
+}
+
+.footer {
+    background-color: #222;
+}
+
+.footer .container-footer {
+    background-color: #222;
+}
+
+.footer .row-footer {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: start;
+}
+
+.col-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo h1 {
+    color: rgb(241, 205, 0);
+    font-size: 2rem;
+}
+
+.footer-logo p {
+    color: #e5e5e5;
+    font-size: 14px;
+}
+
+.footer-logo p span {
+    color: #f1cd00;
+}
+
+.social-links a i {
+    color: #f1cd00;
+    font-size: 1.5rem;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+
+.social-links a i:hover {
+    color: #fff1a4;
+    transform: rotate(360deg);
+}
+
+.col-footer h5 {
+    color: #f1cd00;
+}
+
+.col-footer ul li {
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+
+.col-footer ul li a {
+    color: #e5e5e5;
+}
+
+.col-footer ul li a:hover {
+    color: rgb(241, 205, 0);
+}
+
+.group-items {
+    display: flex;
+    margin-left: 10px;
+}
+
+.group-items h6 {
+    color: rgb(241, 205, 0);
+}
+
+.group-items p {
+    color: #e5e5e5;
+    margin-left: 5px;
+}
+
+.copyright {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright span {
+    color: #f1cd00;
+    margin-left: 5px;
+}
+
+#welcome-section {
+    height: 100vh;
+}
+
+/* responsive design & displaying navbar for small screen */
+@media(max-width:1280px) {
+    .wave1 {
+        position: absolute;
+    }
+}
+
+@media(max-width:996px) {
+
+    nav .togglebtn {
+        display: initial;
+    }
+
+    /* for toggle button */
+    .click {
+        top: 45px;
+    }
+
+    .click span {
+        position: absolute;
+        margin-top: 12px;
+    }
+
+    .click span:first-child {
+        transform: rotate(-40deg);
+    }
+
+    .click span:nth-child(2) {
+        opacity: 0;
+        margin: 0;
+    }
+
+    .click span:last-child {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    nav .navlinks {
+        position: absolute;
+        top: 110px;
+        right: -100%;
+        bottom: 0;
+        width: 60%;
+        height: 100vh;
+        background-color: #222;
+        z-index: 3;
+        box-shadow: 5px 13px 30px rgba(0, 0, 0, 0.1);
+        transition: 0.5s;
+        padding: 25px 0px;
+    }
+
+    nav .navlinks li {
+        display: block;
+    }
+    
+    nav .navlinks li a {
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    nav .navlinks.open {
+        right: 0;
+    }
+
+    .hero-text {
+        margin-left: 35px;
+    }
+}
+
+@media(max-width:768px) {
+
+    .wave1 {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .container {
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+
+    .hero-text {
+        padding: 40px 0px;
+    }
+
+.hero-text .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.hero-text .social i {
+    font-size: 1.5rem;
+}
+
+.row-footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 50px;
+}
+
+.col-footer {
+    margin-bottom: 25px;
+}
+
+.hero-text h1{
+    font-size: 2rem;
+}
+
+.hero-text p {
+    font-size: 12px;
+
+}
+
+.btn-group .btn {
+    font-size: 14px;
+}
+}
+
+@media (max-width: 576px) {
+    .wave1 {
+        position: absolute;
+        bottom: 0;
+    }
+    #about {
+        padding-top: 7rem;
+    }
+
+    #projects {
+        padding-top: 7rem;
+    }
+    
+    #contact {
+        padding-top: 2rem;
+    }
+
+    .row-footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col-footer {
+        margin-bottom: 25px;
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 12px;
+    }
+
+    .btn-group .btn {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 390px) {
+    .wave1 {
+        position: absolute;
+    }
+
+    .copyright {
+        font-size: 10px;
+    }
+
+    .group-items h6, .group-items p {
+        font-size: 13px;
+    }
+}
